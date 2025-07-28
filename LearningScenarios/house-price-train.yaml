@@ -10,11 +10,14 @@ metadata:
     artifacts.ai.sap.com/housedataset.kind: "dataset" # Helps in suggesting the kind of inputs that can be attached.
   labels:
     scenarios.ai.sap.com/id: "learning-datalines"
-    ai.sap.com/version: "1.0"
+    ai.sap.com/version: "2.0"
 spec:
   imagePullSecrets:
     - name: credstutorialrepo # your docker registry secret
   entrypoint: mypipeline
+    arguments:
+    parameters: # placeholder for string like inputs
+        - name: DT_MAX_DEPTH # identifier local to this workflow
   templates:
   - name: mypipeline
     steps:
