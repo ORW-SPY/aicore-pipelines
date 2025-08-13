@@ -29,7 +29,7 @@ spec:
     inputs:
       artifacts:  # placeholder for cloud storage attachements
         - name: housedataset # a name for the placeholder
-          path: ai://default/data # where to copy in the Dataset in the Docker image
+          path: /app/data/ # where to copy in the Dataset in the Docker image
     outputs:
           artifacts:
             - name: housepricemodel # local identifier name to the workflow
