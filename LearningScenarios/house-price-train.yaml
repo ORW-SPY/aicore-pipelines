@@ -40,6 +40,7 @@ spec:
                   {}
     container:
       image: docker.io/orwspy/house-price:04 # Your docker image name
+      imagePullPolicy: Always
       command: ["/bin/sh", "-c"]
       env:
         - name: DT_MAX_DEPTH # name of the environment variable inside Docker container
