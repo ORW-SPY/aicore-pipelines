@@ -22,7 +22,7 @@ spec:
     spec: |
       predictor:
         imagePullSecrets:
-          - name: dockerhub-secret
+          - name: orwspy
         containers:
         - name: kfserving-container
           image: "docker.io/orwspy/movie-review-clf-serve:0.0.1"
