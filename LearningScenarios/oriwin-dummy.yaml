@@ -9,8 +9,8 @@ metadata:
       executables.ai.sap.com/name: "training" # Executable name should describe the workflow in the use case
       artifacts.ai.sap.com/housedataset.kind: "dataset" # Helps in suggesting the kind of inputs that can be attached.
       artifacts.ai.sap.com/housemodel.kind: "model" # Helps in suggesting the kind of artifact that can be generated.
-      labels:
-        scenarios.ai.sap.com/id: "learning-datalines"
+    labels:
+      scenarios.ai.sap.com/id: "learning-datalines"
       ai.sap.com/version: "1.0"
   spec:
     imagePullSecrets:
@@ -46,4 +46,5 @@ metadata:
           - name: DT_MAX_DEPTH # name of the environment variable inside Docker container
             value: "{{workflow.parameters.DT_MAX_DEPTH}}"  # will make it as variable later
         args:
+
           - "python /app/src/main.py"
