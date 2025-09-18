@@ -39,7 +39,7 @@ spec:
                 none:   # specify not to compress while uploading to cloud
                   {}
     container:
-      image: docker.io/orwspy/oriwin-dummy:02 # Your docker image name
+      image: docker.io/orwspy/oriwin-dummy:03 # Your docker image name
       imagePullPolicy: Always
       command: ["/bin/sh", "-c"]
       env:
@@ -48,6 +48,7 @@ spec:
       args:
 
         - "python /app/src/main.py"
+
 
 
 
